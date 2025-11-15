@@ -7,7 +7,7 @@ st.title("Gemini Chatbot")
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Load model (choose Gemini 1.5 Flash or Pro)
-MODEL_ID = "gemini-1.5-flash"
+MODEL_ID = "gemini-flash-latest"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -41,3 +41,4 @@ if prompt := st.chat_input("Say something..."):
                 st.write(chunk.text)
 
     st.session_state.messages.append({"role": "assistant", "content": output})
+
