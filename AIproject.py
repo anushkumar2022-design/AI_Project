@@ -40,5 +40,6 @@ if prompt := st.chat_input("Say something..."):
                 output += chunk.text
                 st.write(chunk.text)
 
-    st.session_state.messages.append({"role": "assistant", "content": output})
+    st.session_state.messages.append({"role": "model", "content": output})
+
 
